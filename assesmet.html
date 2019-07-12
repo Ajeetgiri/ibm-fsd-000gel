@@ -1,0 +1,74 @@
+<html>
+    <title>Time Table</title>
+    <head>
+    <script type="text/javascript" src="assisment.js"></script>
+    <style>
+
+
+        fieldset legend{
+            font-size: 40px;
+            font-family : 'Times New Roman', Times, serif;
+            border: 0.2em;
+            font-stretch: expanded;
+            color: maroon;
+        }
+        #ten{
+            width: 20%;
+            border: 3px solid black;
+            background-color: antiquewhite;
+            
+            
+        }
+    </style>
+    </head> 
+        <body>
+            
+            <fieldset  id='ten'>
+                    <table>
+                <legend>Trainer Info</legend>
+                <tr>
+                    <th>Name</th>
+                    <td>
+                        <input type="text" id="name" placeholder="Name">
+                    </td>
+                        <tr>
+                            <th>email</th>
+                            <td>
+                        <input type="text" id="email" placeholder="Name" >
+                    </td>
+                </tr>
+
+                    <tr>
+                        <th>Skills</th>
+                        <td>
+                            <input type="checkbox"  value="physics" name="_check">Physics<br>
+                            <input type="checkbox" value="maths" name="_check">maths<br>
+                            <input type="checkbox"value="Cse" name="_check">Cse<br>
+                            <input type="checkbox"value="English" name="_check">English<br>
+                            <input type="submit" value="save" onclick="savedata()">
+                        </td>
+                    </tr>
+                    
+                </tr>
+
+            
+            </table>
+        </body>
+    </fieldset>
+
+    <fieldset>
+        <div>
+            <tr>
+                <th>timetable</th>
+                <th>
+                    <input type="button" value="class A" onclick="display">
+                    <input type="button" value="class B" onclick="display">
+                </th>
+
+            </tr>
+        </div>
+    </fieldset>
+    
+        
+            
+</html>

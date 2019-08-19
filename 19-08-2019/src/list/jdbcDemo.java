@@ -22,14 +22,15 @@ public class jdbcDemo {
 	}
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-	
+
 		Connection connection = DriverManager.getConnection(properties.getProperty("JDBC_URL"),
 				properties.getProperty("USER"), properties.getProperty("PASSWORD"));
-		java.sql.Statement statement =connection.createStatement();
+		java.sql.Statement statement = connection.createStatement();
 		ResultSet resultSet = statement.executeQuery("select * from student");
 		System.out.println("ID Name Address");
 		while (resultSet.next()) {
-			//System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getString(3));
+			// System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " +
+			// resultSet.getString(3));
 			System.out.printf("\n%d %s %s", resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3));
 		}
 

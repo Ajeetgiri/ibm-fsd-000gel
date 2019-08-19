@@ -23,13 +23,15 @@ public class TennisCoach {
 	public TennisCoach() {
 		super();
 	}
-    public String CoachDetails() {
-    	StringBuilder sb= new StringBuilder();
-    	sb.append("Name of coach "+getName());
-    	sb.append(" plan of today workout is "+getDailyWorkout());
-    	sb.append(" level of coachh is "+getLevel());
-    	return sb.toString();
-    }
+
+	public String CoachDetails() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Name of coach " + getName());
+		sb.append(" plan of today workout is " + getDailyWorkout());
+		sb.append(" level of coachh is " + getLevel());
+		return sb.toString();
+	}
+
 	public String getDailyWorkout() {
 		return "practice back volleyball today";
 

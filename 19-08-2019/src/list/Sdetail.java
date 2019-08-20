@@ -77,7 +77,7 @@ public class Sdetail {
 		while (i.hasNext()) {
 			Sdetail d = i.next();
 			if (d.getId() == id) {
-				//System.out.println(i.toString());
+				// System.out.println(i.toString());
 				i.remove();
 			}
 		}
@@ -90,14 +90,13 @@ public class Sdetail {
 
 	@Override
 	public String toString() {
-		return "Sdetail [id=" + id + ", name=" + name + ", adress=" + address + ", s=" + s + "]";
+		return "[id=" + id + ", name=" + name + ", adress=" + address + ", s=" + s + "]";
 	}
 
 	public void viewDetail() {
-		for (Sdetail s : s) {
 
-			System.out.println(s);
-		}
+		System.out.println(s.toString());
+
 	}
 
 }

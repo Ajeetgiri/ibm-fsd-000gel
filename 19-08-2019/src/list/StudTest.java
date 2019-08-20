@@ -9,7 +9,7 @@ public class StudTest {
 		Sdetail s = new Sdetail();
 
 		do {
-			System.out.println("enter your option :" + "1-Add" + "2-Delete" + "3-View" + "4-Update");
+			System.out.println("enter your option :" +"\n"+ " 1-Add" +"\n"+ " 2-Delete" +"\n"+ " 3-View" +"\n"+  " 4-Update");
 			Scanner sc = new Scanner(System.in);
 			int option = sc.nextInt();
 

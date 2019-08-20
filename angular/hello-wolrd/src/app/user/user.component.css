@@ -1,0 +1,30 @@
+h1{
+    color: rgb(67, 15, 97);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+table, td, th {
+    border: 1px solid black;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 40%;
+    align-content: center;
+    align-items: center;
+    margin-left: 35%;
+    text-align: center;
+    color: rgb(3, 46, 30);
+    border-block: 2px;
+  }
+  
+  td {
+    height: 35px;
+    vertical-align: bottom;
+  }
+  th {
+   color: black;
+    text-shadow: 10%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }

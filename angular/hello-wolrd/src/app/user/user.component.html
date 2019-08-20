@@ -1,0 +1,28 @@
+<p>user works!</p>
+<!--<h1 style="text-align: center">Ajeet Giri</h1>-->
+<h1 style="text-align: center">Car's Detail</h1>
+
+    <table>
+        <thead>
+            <tr>
+             <th>id</th>
+             <th>name</th>
+            <th>speed</th>
+            <th>price</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ca of cars">
+             <td>{{ca.id}}</td>
+            <td>{{ca.name}}</td>
+            <td>{{ca.speed}}</td>
+            <td>{{ca.price}}</td>
+            
+            <td><input type="button" value="delete" (click) = 'deleteuser(ca.id)'></td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="button" (click)="clickMe()" value="Click Me!" />
+
+    
+    <p>Message is:</p>{{Message}}

@@ -76,4 +76,19 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 		return m;
 	}
+
+	@Override
+	public Employee delete(int id) {
+		try {
+			pStatement = connection.prepareStatement("delete from employee where id = ?");
+			pStatement.setInt(1,id);
+			int 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+		
+	}
 }

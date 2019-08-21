@@ -8,6 +8,9 @@ import java.awt.BorderLayout;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MyFirstInt {
 
@@ -48,10 +51,18 @@ public class MyFirstInt {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnLogin = new JButton("Login");
-		btnLogin.setBounds(43, 164, 83, 26);
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent o) {
+			}
+		});
+		btnLogin.setBounds(45, 164, 83, 26);
 		frame.getContentPane().add(btnLogin);
 		
 		JButton btnReset = new JButton("Reset");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnReset.setBounds(259, 164, 83, 26);
 		frame.getContentPane().add(btnReset);
 		
@@ -61,10 +72,12 @@ public class MyFirstInt {
 		textField.setColumns(10);
 		
 		JLabel lblUsername = new JLabel("UserName");
+		lblUsername.setHorizontalAlignment(SwingConstants.CENTER);
 		lblUsername.setBounds(10, 49, 94, 25);
 		frame.getContentPane().add(lblUsername);
 		
 		JLabel lblPassword = new JLabel("Password");
+		lblPassword.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPassword.setBounds(10, 107, 94, 28);
 		frame.getContentPane().add(lblPassword);
 		

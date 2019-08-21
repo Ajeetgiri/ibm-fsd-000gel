@@ -1,0 +1,28 @@
+package thread;
+
+public class Mystack {
+private int index=1;
+static int Max=26;
+private char[] info = new char[26];
+public synchronized void push (char item) throws InterruptedException {
+	if (index ==Max) {
+		System.out.println("stack overflow");
+		wait();
+	}
+	
+	info [++index]=item;
+	notifyAll();
+	return;
+}
+
+public synchronized void pop () throws InterruptedException {
+	if (index ==-1) {
+		System.out.println("stack underflow");
+		wait();
+	}
+System.out.println(info[index]);
+	 index--;
+	notifyAll();
+
+}
+}

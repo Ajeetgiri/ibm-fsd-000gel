@@ -1,0 +1,10 @@
+package Collection;
+
+public interface Coach {
+	
+	public static String getDailyWorkout() {
+		return "have to work with whole dedication";
+	}
+	
+
+}

@@ -1,0 +1,27 @@
+package list;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapDemo {
+	public static void main(String[] args) {
+	private Map <String, String> map;
+
+	public MapDemo() {
+		super();
+		map = new HashMap<String,String>();
+	}
+	public void CreateMap() {
+		map.put("Nmae", "Ajeet");
+		map.put("Phone","7067574915");
+		
+	}
+public void getKeyValue() {
+	map.keySet();
+}
+
+public void getMapValue() {
+	map.values();
+System.out.println(map);
+}
+}

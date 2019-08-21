@@ -1,0 +1,55 @@
+package list;
+
+public class Student implements Comparable<Object> {
+
+	private String firstName;
+	private String lastName;
+	private Double GPA;
+
+	@Override
+	public String toString() {
+		return "Student [firstName=" + firstName + ", lastName=" + lastName + ", GPA=" + GPA + "]";
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Double getGPA() {
+		return GPA;
+	}
+
+	public void setGPA(Double gPA) {
+		GPA = gPA;
+	}
+
+	public Student() {
+		super();
+	}
+
+	public Student(String firstName, String lastName, Double gPA) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		GPA = gPA;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

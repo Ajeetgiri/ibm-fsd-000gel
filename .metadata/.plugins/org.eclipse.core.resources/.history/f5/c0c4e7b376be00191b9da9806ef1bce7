@@ -1,0 +1,12 @@
+package Collection;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

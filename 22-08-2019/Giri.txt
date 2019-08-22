@@ -1,0 +1,18 @@
+ackage project5;,5
+,5
+import java.util.Scanner;,8
+import java.util.TreeMap;,9
+,9
+public class Main {,5
+,5
+	public static void main(String[] args) {,10
+		Scanner scanner = new Scanner(System.in);,9
+		TreeMap<Character, Integer> frequency = new TreeMap<Character,Integer>();,20
+		System.out.println("Enter input string:");,8
+		String sentence = scanner.nextLine();,9
+		LetterSequence letter = new LetterSequence(sentence);,18
+		frequency = letter.computeFrequency();,11
+		letter.displayLetterFrequency(frequency);,12
+	},0
+,0
+},0

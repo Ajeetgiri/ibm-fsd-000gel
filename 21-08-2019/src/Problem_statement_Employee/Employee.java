@@ -4,10 +4,10 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Employee implements Comparable {
+public class Employee implements Comparable<Object> {
 	Scanner sc = new Scanner(System.in);
 	Set<Employee> emp = new TreeSet<Employee>();
-	private  int id;
+	private int id;
 	private String name;
 	private String department;
 	private String date;
@@ -16,8 +16,8 @@ public class Employee implements Comparable {
 
 	@Override
 	public String toString() {
-		return " \n id=" + id + ", name=" + name + ", department=" + department + ", date=" + date + ", age="
-				+ age + ", salary=" + salary + "";
+		return " \n id=" + id + ", name=" + name + ", department=" + department + ", date=" + date + ", age=" + age
+				+ ", salary=" + salary + "";
 	}
 
 	public String getName() {
@@ -60,9 +60,9 @@ public class Employee implements Comparable {
 		super();
 	}
 
-	public Employee(int id,String name, String department, String date, int age, int salary) {
+	public Employee(int id, String name, String department, String date, int age, int salary) {
 		super();
-        this.id=id;
+		this.id = id;
 		this.name = name;
 		this.department = department;
 		this.date = date;
@@ -85,8 +85,8 @@ public class Employee implements Comparable {
 			return -1;
 	}
 
-	public void addEmployee(int id,String name, String department, String date, int salary, int age) {
-		System.out.println("Enter name of Employee "+id);
+	public void addEmployee(int id, String name, String department, String date, int salary, int age) {
+		System.out.println("Enter name of Employee " + id);
 		name = sc.next();
 		System.out.println("Enter Department of Employee");
 		department = sc.next();
@@ -96,9 +96,10 @@ public class Employee implements Comparable {
 		salary = sc.nextInt();
 		System.out.println("Enter Age of Employee");
 		age = sc.nextInt();
-		emp.add(new Employee(id,name,department,date,salary,age));
+		emp.add(new Employee(id, name, department, date, salary, age));
 
 	}
+
 	public void viewDetail() {
 		System.out.println(emp.toString());
 	}

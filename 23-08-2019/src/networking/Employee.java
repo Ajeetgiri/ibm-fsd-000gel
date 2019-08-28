@@ -8,6 +8,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Employee {
 
@@ -61,6 +63,10 @@ public class Employee {
 		textField.setColumns(10);
 		
 		JButton btnSubmit = new JButton("Submit");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnSubmit.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 16));
 		btnSubmit.setBounds(123, 211, 125, 26);
 		frame.getContentPane().add(btnSubmit);

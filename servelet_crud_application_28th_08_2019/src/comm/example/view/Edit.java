@@ -17,9 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import comm.example.factory.MyConnectionFactory;
 
-/**
- * Servlet implementation class Edit
- */
 @WebServlet("/Edit")
 public class Edit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -46,16 +43,16 @@ public class Edit extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		id = Integer.parseInt(request.getParameter("uid").toString());
-		name = request.getParameter("uName");
-		email = request.getParameter("uEmail");
-		password = request.getParameter("uPass");
-		country = request.getParameter("uCountry");
+		id = Integer.parseInt(request.getParameter("id").toString());
+		name = request.getParameter("name");
+		email = request.getParameter("email");
+		password = request.getParameter("password");
+		country = request.getParameter("country");
 		//out.println(id);
 		try {
 		Connection connection = MyConnectionFactory.getMySqlConnectionForHR();
 		
-		PreparedStatement pst = connection.prepareStatement("update employee set name =?"
+		PreparedStatement pst = connection.prepareStatement("update employe set name =?"
 				+ ",email=? "+",password =? "+",country=?"+"where id=?");
 		out.println(country);
 		
@@ -71,7 +68,7 @@ public class Edit extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		RequestDispatcher view = request.getRequestDispatcher("View");
+		RequestDispatcher view = request.getRequestDispatcher("CheckServelet");
 		view.forward(request, response);
 	}
 
@@ -82,11 +79,11 @@ public class Edit extends HttpServlet {
 		param = request.getParameter("id").toString();
 		id = Integer.parseInt(param);
 		Connection connection = MyConnectionFactory.getMySqlConnectionForHR();
-		PreparedStatement pst = connection.prepareStatement("select * from employe where id =" + id);
+		PreparedStatement pst = connection.prepareStatement("select * from employe where id = " + id);
 		ResultSet rs = pst.executeQuery();
 
 		if (rs.next()) {
-			out.println("<form action ='View' method='post'>" + "<table>"
+			out.println("<form action ='Edit' method='post'>" + "<table>"
 					+ "<tr><th>Fields</th><th>Input</th></tr>" + "<tbody>"
 					+ "<tr><td>Name :</td><td><input type='text' name='name' value=" + rs.getString(2)
 					+ " /></td></tr>" + "<tr><td>Password :</td><td><input type='text' name='password' value="
@@ -95,7 +92,7 @@ public class Edit extends HttpServlet {
 					+ " /></td></tr>" + "<tr><td>Country :</td><td><select name='country'>"
 					+ "			<option selected>India</option>" + "			<option>Pakistan</option>"
 					+ "			<option>other</option>" + "		</select></td></tr>" + "<tbody>" + "</table>"
-					+ "<input type='text' name='uid' hidden value ='" + id+"'/>"
+					+ "<input type='text' name='id' hidden value ='" + id+"'/>"
 					+ "<tr><td></td><td><input type='submit' value='Save' /></td></tr>" + "</form>");
 		} else {
 			out.println("No record Fetched");

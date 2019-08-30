@@ -41,14 +41,11 @@ public class Delete extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		RequestDispatcher view = request.getRequestDispatcher("View");
+		RequestDispatcher view = request.getRequestDispatcher("CheckServelet");
 		view.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
